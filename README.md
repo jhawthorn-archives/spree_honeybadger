@@ -1,6 +1,7 @@
-# SpreeHoneybadger
+# Spree Honeybadger
 
-TODO: Write a gem description
+Integrates [spree](https://github.com/spree/spree) with the [Honeybadger Exception Notifier for Ruby and Rails](http://honeybadger.io).
+This gem adds current user and order as context in exceptions, and filters out creditcard numbers and CCV.
 
 ## Installation
 
@@ -8,17 +9,9 @@ Add this line to your application's Gemfile:
 
     gem 'spree_honeybadger'
 
-And then execute:
+If you haven't already, perform the installation steps for the [honeybadger gem](https://github.com/honeybadger-io/honeybadger-ruby)
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install spree_honeybadger
-
-## Usage
-
-TODO: Write usage instructions here
+    $ rails generate honeybadger --api-key <Your Api Key>
 
 ## Contributing
 
