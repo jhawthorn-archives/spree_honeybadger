@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = SpreeHoneybadger::VERSION
   spec.authors       = ["John Hawthorn"]
   spec.email         = ["john@freerunningtechnologies.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Improved honeybadger error reporting for spree}
+  spec.summary       = %q{Gives details of current_spree_user and current_order}
+  spec.homepage      = "https://github.com/jhawthorn/spree_honeybadger"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,6 +18,11 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.4"
+  spec.add_dependency "honeybadger"
+  spec.add_dependency "spree_core"
+
+  spec.add_development_dependency "spree"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "sqlite3"
 end
